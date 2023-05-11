@@ -16,35 +16,6 @@ public class MiniMercado {
         ItemPedidoDao itemPedidoDao = DaoFactory.createItemPedidoDao();
 
 
-        System.out.println("====================Pagamento=========================");
-
-//        System.out.println("=== Teste 1: Pagamento insert ===");
-//        Pagamento pagamento = new Pagamento(null,10.00);
-//        pagamentoDao.insert(pagamento);
-//        System.out.println("Inserido novo ID = " + pagamento.getIdPagamento());
-//
-//        System.out.println("=== Teste 2: Pagamento delete ===");
-//        System.out.println("Entre com o ID para deletar:");
-//        int id = sc.nextInt();
-//        pagamentoDao.deleteById(id);
-//        System.out.println("Registro deletado");
-//
-//        System.out.println("=== Teste 3: Pagamento update ===");
-//        Pagamento pagamento1 = new Pagamento();
-//        pagamento1 = pagamentoDao.findById(1);
-//        pagamento1.setValor(500.00);
-//        pagamentoDao.update(pagamento1);
-//        System.out.println("Registro atualizado");
-//
-//        System.out.println("=== Teste 4: Pagamento findbyAll ===");
-//        List<Pagamento> list = pagamentoDao.findAll();
-//        for(Pagamento pg : list){
-//            System.out.println(pg);
-//        }
-//
-//        System.out.println("=== Teste 5: Pagamento findbyId ===");
-//        Pagamento pagamento2 = pagamentoDao.findById(1);
-//        System.out.println(pagamento2);
 
         System.out.println("====================Categoria=========================");
 
