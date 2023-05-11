@@ -8,7 +8,7 @@ import org.junit.jupiter.api.*;
 import java.sql.Connection;
 import java.util.List;
 
-public class CategoriaServiceDao {
+public class CategoriaServiceDaoTest {
     private Connection conn;
     private CategoriaDao categoriaService;
 
@@ -67,7 +67,5 @@ public class CategoriaServiceDao {
         Assertions.assertNotNull(categorias);
         Assertions.assertFalse(categorias.isEmpty());
     }
-
-
 
 }
