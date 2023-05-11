@@ -3,6 +3,7 @@ package aplication;
 import dao.*;
 import model.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ public class MiniMercado {
         System.out.println("====================Categoria=========================");
 
 //        System.out.println("=== Teste 1: Categoria insert ===");
-//        Categoria newCategoria = new Categoria(null,"Limpeza");
+//        Categoria newCategoria = new Categoria(null,"Açougue");
 //        categoriaDao.insert(newCategoria);
 //        System.out.println("Inserido novo Registro = " + newCategoria.getIdCategoria());
 
@@ -32,7 +33,7 @@ public class MiniMercado {
 //
 //        System.out.println("=== Teste 3: Categoria update ===");
 //        Categoria categoria = new Categoria();
-//        categoria = categoriaDao.findById(4);
+//        categoria = categoriaDao.findById(1);
 //        categoria.setNome("Padaria");
 //        categoriaDao.update(categoria);
 //        System.out.println("Registro atualizado");
@@ -42,16 +43,16 @@ public class MiniMercado {
 //        for(Categoria categoria : list){
 //            System.out.println(categoria);
 //        }
-//
+
 //        System.out.println("=== Teste 5: Categoria findbyId ===");
-//        Categoria categoria = categoriaDao.findById(4);
+//        Categoria categoria = categoriaDao.findById(1);
 //        System.out.println(categoria);
 
 
         System.out.println("====================Produto=========================");
 
 //        System.out.println("=== Teste 1: Produto insert ===");
-//        Produto produto = new Produto(null,"Miojo",5.00,categoria);
+//        Produto produto = new Produto(null,"Salame",8.00,categoria);
 //        produtoDao.insert(produto);
 //        System.out.println("Inserido novo ID = " + produto.getIdProduto());
 //
@@ -63,7 +64,7 @@ public class MiniMercado {
 //
 //        System.out.println("=== Teste 3: Produto update ===");
 //        Produto newproduto = new Produto();
-//        newproduto = produtoDao.findById(5);
+//        newproduto = produtoDao.findById(1);
 //        newproduto.setNome("Farinha");
 //        newproduto.setPreco(30.00);
 //        newproduto.setCategoria(categoria);
@@ -77,16 +78,16 @@ public class MiniMercado {
 //        }
 //
 //        System.out.println("=== Teste 5: Produto findbyId ===");
-//        Produto produto2 = produtoDao.findById(5);
+//        Produto produto2 = produtoDao.findById(1);
 //        System.out.println(produto2);
 
 
         System.out.println("====================Pedido=========================");
 
 //        System.out.println("=== Teste 1: pedido insert ===");
-//        Pedido pedido = new Pedido(null,new Date(),100.0);
+//        Pedido pedido = new Pedido(null,new Date(),200.0);
 //        pedidoDao.insert(pedido);
-//        System.out.println("Inserido novo ID = " + pedido.getIdPedido());
+//        System.out.println("Inserido novo Registro = " + pedido.getIdPedido());
 //
 //
 //        System.out.println("=== Teste 2: pedido delete ===");
@@ -97,9 +98,9 @@ public class MiniMercado {
 //
 //        System.out.println("=== Teste 3: pedido update ===");
 //        Pedido pedido = new Pedido();
-//        pedido = pedidoDao.findById(2);
+//        pedido = pedidoDao.findById(1);
 //        pedido.setData(new Date());
-//        pedido.setTotal(200.00);
+//        pedido.setTotal(500.00);
 //        pedidoDao.update(pedido);
 //        System.out.println("Registro atualizado");
 //
@@ -110,16 +111,13 @@ public class MiniMercado {
 //        }
 //
 //        System.out.println("=== Teste 5: pedido findbyId ===");
-//        Pedido pedido2 = pedidoDao.findById(2);
+//        Pedido pedido2 = pedidoDao.findById(1);
 //        System.out.println(pedido2);
-
-
-
 
         System.out.println("====================itempedido=========================");
 
 //        System.out.println("=== Teste 1: itempedido insert ===");
-//        ItemPedido newItemPedido = new ItemPedido(null,10,pedido2,produto2);
+//        ItemPedido newItemPedido = new ItemPedido(null,50,pedido2,produto2);
 //        itemPedidoDao.insert(newItemPedido);
 //        System.out.println("Inserido novo ID = " + newItemPedido.getIdItemPedido());
 //

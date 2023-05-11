@@ -57,20 +57,20 @@ public class ItemPedidoServiceDaoJDBC implements ItemPedidoDao {
 
     @Override
     public void deleteById(Integer id) {
-        PreparedStatement st = null;
-        try {
-            st = conn.prepareStatement(
-                    "DELETE FROM itempedido WHERE id_itempedido = ?");
-            st.setInt(1, id);
 
-            int rowsAffected = st.executeUpdate();
-            if (rowsAffected == 0) {
-                throw new DbException("O registro não foi encontrado.");
+        PreparedStatement st = null;
+        try{
+            st = conn.prepareStatement("DELETE FROM itempedido WHERE id_itempedido = ?");
+            st.setInt(1,id);
+            int linhasAfetadas = st.executeUpdate();
+            if(linhasAfetadas == 0){
+                throw new DbException("Registro não encontrado");
             }
-        } catch (SQLException e) {
+        } catch (SQLException e){
             throw new DbException(e.getMessage());
         } finally {
             DB.closeStatement(st);
+
         }
     }
 

@@ -55,7 +55,7 @@ public class ProdutoServiceDaoJDBC implements ProdutoDao {
         try{
             st = conn.prepareStatement(
                     "UPDATE produto "
-                            + "SET nome = ?, preco = ?, id_categoria "
+                            + "SET nome = ?, preco = ?, id_categoria = ? "
                             + "WHERE id_produto = ?");
 
             st.setString(1,obj.getNome());
