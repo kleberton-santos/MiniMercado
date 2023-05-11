@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class MiniMercado {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-//        CaixaDao caixaDao = DaoFactory.createCaixaDao();
+        CaixaDao caixaDao = DaoFactory.createCaixaDao();
         ProdutoDao produtoDao = DaoFactory.createProdutoDao();
         CategoriaDao categoriaDao = DaoFactory.createCategoriaDao();
         PedidoDao pedidoDao = DaoFactory.createPedidoDao();

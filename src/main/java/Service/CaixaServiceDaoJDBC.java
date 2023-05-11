@@ -18,7 +18,7 @@ public class CaixaServiceDaoJDBC implements CaixaDao {
 
     @Override
     public void insert(Caixa obj) {
-        
+
     }
 
     @Override
