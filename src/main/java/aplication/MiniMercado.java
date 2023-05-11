@@ -150,35 +150,6 @@ public class MiniMercado {
 
         System.out.println("====================Caixa=========================");
 
-//        System.out.println("=== Teste 1: Caixa insert ===");
-//        Caixa caixa = new Caixa(null,50.00,pagamento2,estoque2);
-//        caixaDao.insert(caixa);
-//        System.out.println("Inserted! New id = " + caixa.getIdCaixa());
-//
-//        System.out.println("=== Teste 2: Caixa delete ===");
-//        System.out.println("Entre com o ID para deletar:");
-//        int id = sc.nextInt();
-//        caixaDao.deleteById(id);
-//        System.out.println("Registro deletado")
-//
-//        System.out.println("=== Teste 3: Caixa update ===");
-//        Caixa caixa1 = new Caixa();
-//        caixa1 = caixaDao.findById(1);
-//        caixa1.setSaldo(5.00);
-//        caixa1.setPagamento(pagamento2);
-//        caixa1.setEstoque(estoque2);
-//        caixaDao.update(caixa);
-//        System.out.println("Registro atualizado");
-//
-//        System.out.println("=== Teste 4: caixa findbyAll ===");
-//        List<Caixa> list = caixaDao.findAll();
-//        for(Caixa cx : list){
-//            System.out.println(cx);
-//        }
-//
-//        System.out.println("=== Teste 1: Caixa findbyId ===");
-//        Caixa caixa2 = caixaDao.findById(1);
-//        System.out.println(caixa2);
 
     }
 }
