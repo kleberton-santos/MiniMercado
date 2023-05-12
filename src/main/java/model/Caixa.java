@@ -7,16 +7,18 @@ public class Caixa {
     private Integer idCaixa;
     private Double saldo;
     private Double valorPagamento;
+    private StatusPagamento status;
     private Pedido pedido;
     List<Pedido> pedidoList;
 
     public Caixa() {
     }
 
-    public Caixa(Integer idCaixa, Double saldo, Double valorPagamento, Pedido pedido) {
+    public Caixa(Integer idCaixa, Double saldo, Double valorPagamento, StatusPagamento status, Pedido pedido) {
         this.idCaixa = idCaixa;
         this.saldo = saldo;
         this.valorPagamento = valorPagamento;
+        this.status = status;
         this.pedido = pedido;
     }
 
@@ -42,6 +44,14 @@ public class Caixa {
 
     public void setValorPagamento(Double valorPagamento) {
         this.valorPagamento = valorPagamento;
+    }
+
+    public StatusPagamento getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusPagamento status) {
+        this.status = status;
     }
 
     public Pedido getPedido() {
@@ -79,6 +89,7 @@ public class Caixa {
                 "idCaixa=" + idCaixa +
                 ", saldo=" + saldo +
                 ", valorPagamento=" + valorPagamento +
+                ", status=" + status +
                 ", pedido=" + pedido +
                 ", pedidoList=" + pedidoList +
                 '}';

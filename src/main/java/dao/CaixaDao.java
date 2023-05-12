@@ -1,6 +1,7 @@
 package dao;
 
 import model.Caixa;
+import model.Pedido;
 
 import java.util.List;
 
@@ -11,5 +12,6 @@ public interface CaixaDao {
     void deleteById(Integer id);
     Caixa findById(Integer id);
     List<Caixa> findAll();
+    void finalizaPedido(Pedido pedido, Caixa caixa);
 
 }

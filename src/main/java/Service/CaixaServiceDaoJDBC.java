@@ -98,4 +98,10 @@ public class CaixaServiceDaoJDBC implements CaixaDao {
     public List<Caixa> findAll() {
         return null;
     }
+
+    @Override
+    public void finalizaPedido(Pedido pedido, Caixa caixa) {
+
+        }
+    
 }
