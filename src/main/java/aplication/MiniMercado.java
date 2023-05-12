@@ -17,8 +17,19 @@ public class MiniMercado {
         ItemPedidoDao itemPedidoDao = DaoFactory.createItemPedidoDao();
 
 
+        System.out.println("===== Teste de um pedido =====");
 
-        System.out.println("====================Categoria=========================");
+        Pedido pedido1 = new Pedido(1,new Date(),10.0);
+        Caixa caixa = new Caixa(null, 500.00, 0.0,StatusPagamento.PAGO,pedido1);
+        caixaDao.finalizaPedido(pedido1,caixa);
+        System.out.println("Valor Pago: " + caixa.getValorPagamento());
+        System.out.println("Saldo do caixa: " + caixa.getSaldo());
+        System.out.println("Status do Pedido: " + caixa.getStatus());
+
+
+
+
+//        System.out.println("====================Categoria=========================");
 
 //        System.out.println("=== Teste 1: Categoria insert ===");
 //        Categoria newCategoria = new Categoria(null,"Açougue");
@@ -49,7 +60,7 @@ public class MiniMercado {
 //        System.out.println(categoria);
 
 
-        System.out.println("====================Produto=========================");
+//        System.out.println("====================Produto=========================");
 
 //        System.out.println("=== Teste 1: Produto insert ===");
 //        Produto produto = new Produto(null,"Salame",8.00,categoria);
@@ -82,7 +93,7 @@ public class MiniMercado {
 //        System.out.println(produto2);
 
 
-        System.out.println("====================Pedido=========================");
+//        System.out.println("====================Pedido=========================");
 
 //        System.out.println("=== Teste 1: pedido insert ===");
 //        Pedido pedido = new Pedido(null,new Date(),200.0);
@@ -114,7 +125,7 @@ public class MiniMercado {
 //        Pedido pedido2 = pedidoDao.findById(1);
 //        System.out.println(pedido2);
 
-        System.out.println("====================itempedido=========================");
+//        System.out.println("====================itempedido=========================");
 
 //        System.out.println("=== Teste 1: itempedido insert ===");
 //        ItemPedido newItemPedido = new ItemPedido(null,50,pedido2,produto2);
@@ -148,7 +159,7 @@ public class MiniMercado {
 //          System.out.println(itemPedido1);
 
 
-        System.out.println("====================Caixa=========================");
+//        System.out.println("====================Caixa=========================");
 //        System.out.println("=== Teste 1: Caixa insert ===");
 //        Pedido pedido = new Pedido(1,new Date(),10.00);
 //        Caixa caixa = new Caixa(null,100.00,200.00,pedido);

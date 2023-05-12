@@ -101,7 +101,26 @@ public class CaixaServiceDaoJDBC implements CaixaDao {
 
     @Override
     public void finalizaPedido(Pedido pedido, Caixa caixa) {
+            Double valorFaltante = pedido.getTotal() - caixa.getValorPagamento();
+            Double valorDelvolvido = caixa.getValorPagamento() - pedido.getTotal();
+            if(caixa.getValorPagamento() == pedido.getTotal()){
+                caixa.setValorPagamento(pedido.getTotal());
+                caixa.setSaldo(caixa.getSaldo() + pedido.getTotal());
+                caixa.setStatus(StatusPagamento.PAGO);
+            } else if (caixa.getValorPagamento() > pedido.getTotal()) {
+                caixa.setValorPagamento(pedido.getTotal());
+                caixa.setSaldo(caixa.getSaldo() + pedido.getTotal());
+                caixa.setStatus(StatusPagamento.PAGO);
+                System.out.println("Valor do troco: " + valorDelvolvido);
+            } else if (caixa.getValorPagamento() == 0){
+                caixa.setStatus(StatusPagamento.CANCELADO);
+                System.out.println("Pedido Cancelado");
+            } else {
+                caixa.setValorPagamento(caixa.getValorPagamento() + valorFaltante);
+                caixa.setStatus(StatusPagamento.PENDENTE);
+                System.out.println("Valor faltante a ser pago: " + valorFaltante);
+            }
+            caixa.setPedido(pedido);
+    }
 
-        }
-    
 }
